@@ -19,7 +19,6 @@ public class ForceIndicatorScript : MonoBehaviour
         forceFactor = indicatorFg.fillAmount;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float dx = Input.GetAxis("Horizontal");

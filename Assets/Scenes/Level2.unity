@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90974ec039befe9429edf275afc7632e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countOfPigs: 2
 --- !u!58 &35847595
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1001,7 +1002,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 7, y: 368}
-  m_SizeDelta: {x: 224.02, y: 50}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &471653406
 CanvasRenderer:
@@ -1136,6 +1137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90974ec039befe9429edf275afc7632e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countOfPigs: 2
 --- !u!58 &543240881
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2229,8 +2231,7 @@ MonoBehaviour:
   content: {fileID: 1617478577}
   titleTMP: {fileID: 471653407}
   messageTMP: {fileID: 250740791}
-  Button1Text: {fileID: 0}
-  Button2Text: {fileID: 0}
+  OnButton: {fileID: 875661923}
 --- !u!114 &1171670045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2798,7 +2799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 1488076623}
   minForce: 500
-  maxForce: 2000
+  maxForce: 1500
 --- !u!50 &1555124385
 Rigidbody2D:
   serializedVersion: 5
@@ -3156,7 +3157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3959e1d1f88da74baa049162b61411a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTimeout: 15
 --- !u!114 &1693623137
 MonoBehaviour:
   m_ObjectHideFlags: 0

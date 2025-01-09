@@ -3,22 +3,34 @@ using UnityEngine;
 public class ArrowScript : MonoBehaviour
 {
     [SerializeField]
-    Transform rotAnchor;
-    float minRotationAngel = -50.0f;
-    float maxRotationAngel = 70.0f;
-    // Update is called once per frame
+    private Transform rotAnchor;
+
+    private float minRotAngle = -50.0f;
+    private float maxRotAngle = 70.0f;
+
+
+
     void Update()
     {
         float dy = Input.GetAxis("Vertical");
-        float currentRotAngle = this.transform.eulerAngles.z;
-        if (currentRotAngle > 180) currentRotAngle -= 360;
-        if (currentRotAngle + dy > minRotationAngel && currentRotAngle + dy < maxRotationAngel)
-            this.transform.RotateAround(rotAnchor.position, Vector3.forward, dy);
-        else
+        float curRotAngle = NormalizeAngle(this.transform.eulerAngles.z);
+        if (curRotAngle > 180)
         {
-            Debug.Log(currentRotAngle);
-            Debug.Log(currentRotAngle+dy);
+            curRotAngle -= 180;
         }
-        //float rotationAngle = Mathf.Clamp(currentRotAngle + dy, minRotationAngel, maxRotationAngel);
+        if (curRotAngle + dy > minRotAngle && curRotAngle + dy < maxRotAngle)
+        {
+            this.transform.RotateAround(rotAnchor.position, Vector3.forward, dy);
+
+        }
     }
+
+    private float NormalizeAngle(float angle)
+    {
+        angle = angle % 360;
+        if (angle > 180) angle -= 360;
+        return angle;
+    }
+
+
 }

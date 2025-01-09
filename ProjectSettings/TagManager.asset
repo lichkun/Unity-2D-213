@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - PigDestroy
+  - NightLight
+  - DayLight
+  - Wall
+  - Key
   layers:
   - Default
   - TransparentFX

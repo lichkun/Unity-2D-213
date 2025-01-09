@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RedBirdToons_0: 653671159489481153
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
